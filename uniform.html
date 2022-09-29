@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/assets/fontawesome-free-6.2.0-web/css/all.min.css">
+    <title>2016畢業季台灣高校制服大賞</title>
+    <style>
+        :root{
+            --main-color:#18b8c7;
+            --secend-color-1:#1f8597;
+            --secend-color-2:#186a79;
+            --hover-color:#fff000;
+            
+        }
+       body{
+        font-family: '微軟正黑體',Arial,Helvetica,sans-serif;
+        background: url(/images/bg.jpg);
+       }
+/* 模組 */
+       .list-unstyled {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .object-cover{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container{
+            width: 900px;
+            margin: 0 auto;
+        }
+        .flex-row{
+            display: flex;
+            flex-direction: row;
+        }
+        .flex-column{
+            display: flex;
+            flex-direction: column;
+        }
+        .center{
+            width: fit-content;
+            margin: 0 auto;
+
+        }
+        .content-box-title{
+        position:absolute;
+        background: var(--secend-color-1);
+        text-align: center;
+        color:#fff;
+        width: 60px;
+        padding: 20px;
+        border-radius: 50%;
+        z-index: 50;
+        top: -30px;
+        left: -30px;
+       }
+       .content-box{
+        position: relative;
+        background: #fff;
+        border-radius: 25px;
+        border: 3px solid var(--main-color);
+        padding: 50px;
+        box-shadow:0px 5px 20px #ccc ;
+        margin: 50px 0;
+       }
+       .content-box p{
+        color: var(--secend-color-2);
+        letter-spacing: 1px;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 1.6rem;
+       }
+       .content-box li p span{
+        color: #333;
+    
+        font-weight: 600;
+       }
+       
+       .flex-center{
+        align-items: center;
+        justify-content: center;        
+       }
+/* 整體區塊 */
+       .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "nav"
+        "main"
+        "footer"
+       }
+       .slogan img.slogan-m,.way img.way-m{
+        display: none;
+    }
+/* 導覽列區塊 */
+       .nav{
+        background: var(--main-color);
+        width: 100%;
+        height: fit-content;
+        position: relative;
+       }
+       .nav-flex{
+        display: flex;
+        flex-direction: column;
+        
+       }
+       .nav-top-left {
+            padding: 0 15px;
+        }
+        .nav-top-left img{
+            
+            width: 300px;
+        }
+        .nav-center{
+            position: relative;
+            flex-grow: 50;
+            padding: 15px 0 15px 0;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-center-logo{
+            margin-bottom: 15px ;
+        }
+        .nav-center-button{
+            margin: 15px 0;
+            text-align: center;
+        }
+        .menu{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .nav-center-button li a{
+            text-decoration: none;
+            color: var(--secend-color-2);
+            font-weight: 900;
+            margin: 0 5px;
+            line-height: 1.6rem;
+            border-radius: 15px;
+        }
+        .nav-center-button li:hover a,.nav-center-button li.active a{
+            text-decoration: none;
+            background: var(--hover-color);
+            font-weight: 700;
+            padding:5px 10px;
+        }
+        .nav-center-right{
+            position: absolute;
+            right: 5px;
+            top: calc(50% - 45px) ;
+        }
+       i{
+        padding: 10px 8px;
+        margin: 3px 5px;
+        text-align: center;
+        font-size: 18px;
+        color: #ddd;
+        background: #000000aa;
+        border-radius: 50% ;
+       }
+       .button-menu{
+        display: none;
+         width: 72px;
+         height:72px;
+         background: url(/images/m_menu.png) no-repeat #000000aa
+         ;
+         background-size: cover;
+         border: #fff000 1px  solid;
+         border-radius: 50%;
+       }
+       .menu-button{
+        background-position:top left;
+       }
+       .button-menu:hover{
+        
+         height: 792px;
+         background: url(/images/m_menu.png) no-repeat #000000aa
+         ;
+         background-size: cover;
+         border: #fff000 1px  solid;
+         border-radius: 0%;
+       }
+       .hr{
+        width: 100%;
+        height: 9px;
+        background: url(/images/header_l.jpg);
+       }
+/* main introduce-section-1 */
+        .slogan{
+            margin: 50px auto 15px auto;
+        }
+       .icon-hat{
+        position: absolute;
+        top: 55px;
+        left: -80px;
+       }
+       .introduce-text{
+        position: relative;
+       }
+       .introduce-text p{
+        text-align: center;
+        font-size: 17px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 2px;
+       }
+       .endorsement-one{
+        position: absolute;
+        right: -170px;
+        top:0;
+        z-index: 99;
+       }
+       .activity-time{
+        position: relative;
+        
+       }
+/* main introduce-section-2 */
+    .activity-schedule{
+        position: relative;
+        
+       }
+    .endorsement-two{
+        position: absolute;
+        left: -90px;
+        bottom:0;
+        z-index: 99;
+       }
+    .way{
+        margin: 0 auto;
+    }
+    .activity-awards{
+        position: relative;
+        
+       }
+    .activity-notice{
+        position: relative;
+        
+       }
+/* footer */
+footer{
+        background:#111;
+        text-align:center ;
+        display: grid;
+        color: #ddd;
+        grid-template-columns: 1fr;
+        
+        
+       }
+       .footer-list{
+        border-bottom: 1px #ddd double;
+       }
+       .footer-list-content{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        
+        justify-content: center;
+       }
+       .footer-list-box{
+        display: flex;
+       }
+       .footer-list-box-title {
+        background: #666;
+        text-align: center;
+        color:#ccc;
+        width: 60px;
+        padding: 20px;
+        border-radius: 50%;
+       }
+       .footer-list-box-img{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        justify-content: center;
+       }
+       .footer-list-box-img img{
+        margin: 5px;
+        
+       }
+    
+       .img-list{
+        margin: 0 5px;
+        height: 100px;
+       }
+       
+@media screen and (max-width:540px) {
+    .button-bar,.nav-center-button,.slogan img.slogan-p,.icon-hat,.endorsement-one,.endorsement-two,.way img.way-p{
+        display: none;
+    }
+    .slogan img.slogan-m,.way img.way-m,.button-menu{
+        display: block;
+        margin: 0 auto;
+    }
+    .way img.way-m{
+        
+    }
+    .content-box{
+        width: 350px;
+        margin: 5% auto;
+    }
+    .content-box li p span{
+        display: block;
+        font-weight: 600;
+       }
+    .activity-notice .content-box li p span{
+        display:inline;
+    }
+    
+    .content-box-title{
+        left:calc( 50% - 60px) ;
+    }
+    
+    .footer-list-content,.footer-list-box{
+        display: flex;
+        flex-direction: column;
+        
+       }
+       .footer-list-content{
+        align-items:stretch;
+        justify-content:start;
+       }
+        .footer-list-box-title {
+        background: #666;
+        text-align: center;
+        color:#ccc;
+        padding: 20px 0;
+        width: 100%;
+        border-radius: 0%;
+        margin: 0;
+       }
+       .img-list{
+        margin:  5px;
+        height: 100px;
+       }
+       .footer-list-box-img{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(fit-content,1fr);
+        align-self:center;
+        justify-items: center;
+        margin: 25px auto;
+       }
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-content nav-flex">
+                <div class="nav-top-left">
+                    <img src="/images/logo_top.png" alt=""> 
+                </div>
+                <div class="nav-center">
+                    <div class="nav-center-logo">
+                        <img src="/images/title.png" alt="">
+                    </div>
+                    <div class="nav-center-button">
+                        <ul class="list-unstyled menu">
+                            <li class="active">
+                                <a href="">活動辦法</a>
+                            </li>
+                            <li>
+                                <a href="">全台海選</a>
+                            </li>
+                            <li>
+                                <a href="">TOP12決賽</a>
+                            </li>
+                            <li>
+                                <a href="">制服辣秘辛</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-center-right">
+                <div class="button-bar">
+                    <div class="button-box">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div class="button-box">
+                        <i class="fa-brands fa-facebook-f fa-fw"></i>
+                    </div>
+                </div>
+                <div class="button-menu">
+                    <div class="menu-button">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="hr"></div>
+        </nav>
+        <main class="container flex-column">
+            <figure class="slogan center container">
+                <img class="slogan-p" src="/images/p_title.png" alt="">
+                <img class="slogan-m" src="/images/p_title_m.png" alt="">
+            </figure>
+            <div class="flex-row center container">
+                
+                <div class="introduce-text">
+                    <div class="icon-hat">
+                        <img src="/images/hat.png" alt="">
+                    </div>
+                    <div class="top-content-text">
+                        <p>專屬高校生的青春印記</p> 
+                        <p>第三屆畢業季高校制服大賞熱血開跑！</p>
+                        <p>網羅全台逾500所高中校園制服進行強烈的廝殺票選</p>
+                        <p>究竟是純潔無敵白襯衫、萬年不敗的水手服</p>
+                        <p>還是充滿萌味的連身款能奪下最終勝利呢?</p>
+                        <p>在即將來臨的畢業季，為自己的學校制服再添一筆輝煌記事吧！</p>
+                        <p>今年，2016的制服大賞，你投哪一家！</p>
+                    </div>
+                    <figure class="endorsement-one">
+                        <img src="/images/girl1.png" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="activity-time">
+                <h2 class=" content-box-title">活動時間</h2>
+                <div class="content-box">
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                第一階段－全台海選：
+                                <span>2016/04/11－04/29，23:59止</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                第二階段－TOP12決賽 (最佳人氣/最萌女校服/最鮮男校服)：
+                                <span>2016/05/09－05/27，23:59止</span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                得獎公佈：
+                                <span>2016/06/08 公布於同網頁，敬請密切注意！</span>
+                            </p>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="activity-schedule ">
+                <h2 class=" content-box-title">賽程說明</h2>
+                <div class="content-box">
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                第一階段－全台海選：
+                                <span>請進入制服地圖活動頁面，登入FB帳號即可投票，每日每帳號可投20票，同項目不可重複投票。</span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                第二階段－TOP12決賽 (最佳人氣/最萌女校服/最鮮男校服)：
+                                <span>請進入 SETN.com 三立新聞網活動頁面，登入FB帳號即可投票，每小時每帳號可投6票，同項目不可重複投票。</span>
+                            </p>
+                            
+                        </li>
+                    </ul>
+                    <figure class="way">
+                        <img class="way-p" src="/images/way_p.jpg" alt="">
+                        <img class="way-m object-cover" src="/images//way_mobile.jpg" alt="">
+                    </figure>
+                    <figure class="endorsement-two">
+                        <img src="/images/girl2.png" alt="">
+                    </figure>
+                    
+                </div>
+                
+            </div>
+            <div class="activity-awards ">
+                <h2 class=" content-box-title">活動獎項</h2>
+                <div class="content-box">
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                參加獎：
+                                <span>凡參加投票者皆具備抽獎資格，共11名。</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                神準獎：
+                                <span>精準預測前12強之投票者，及有機會獲得◯◯◯◯◯，共✕✕名。</span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                應援獎：
+                                <span>應援冠軍隊伍之投票者，及有機會獲得◯◯◯◯◯，共✕✕名。</span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                讚聲獎：
+                                <span>活動期間，分享活動訊息至FB皆具備抽獎資格，共✕✕名。</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="activity-notice ">
+                <h2 class=" content-box-title">注意事項</h2>
+                <div class="content-box">
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                01.&nbsp;
+                                <span>
+                                    參賽者及參與投票網友所提供之個人資料，僅作為抽獎、寄發中獎通知及主辦單位寄發相關資訊使用。每人僅限一次中獎的機會，如發現重複中獎之情況或冒用他人姓名參加活動，將取消重複中獎資格。
+                                </span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                02.&nbsp;
+                                <span>
+                                    得獎將公布於活動網頁，中獎者將以Facebook登錄的Email進行mail通知，若在期限內未回覆正確聯絡資料者，視同放棄中獎資格。
+                                </span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                03.
+                                <span>
+                                    請確認您的得獎回傳通知所填寫的聯絡及地址資料，所有資料皆會保密，只作為獎品寄送依據。逾時未修改正確寄送地址、或因資料填寫不完整或不正確導致無法通知中獎時，將視為放棄領獎資格，獎項不另行補發。
+                                </span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                04.&nbsp;
+                                <span>
+                                    如有任何因電腦、網路、電話、技術或不可歸責於主辦單位之事由，而使寄予得獎人之獎品有遲延、遺失、錯誤、無法辨識或毀損之情況，主辦單 位不負任何法律責任，參加者亦不得因此異議。
+                                </span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                05.&nbsp;
+                                <span>
+                                    活動之獎品以寄送的實物為準，獎品不得轉換、轉讓或折換現金。得獎者應依政府規定，獎品價值超過NT$20,000以上，依國稅局規定需繳交10%稅金。
+                                </span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                06.&nbsp;
+                                <span>
+                                    本活動為公開良性競賽性質，參賽者不得有舞弊、或惡意攻擊訐等情事。如有以下行為主辦單位有權取消參加資格，並保留相關法律追訴權利：使用不當行為或程式灌票或干擾活動進行、傳播不實謠言，造成本活動或本公司名譽受損、違反本活動辦法及政府法令之行為等。
+                                </span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                07.&nbsp;
+                                <span>
+                                    本活動主辦單位，對本活動網站有絕對的管理權，並就參賽者或投票者之資格及票數有審查之權利；若經審認資格不符或票數有不當、不妥情事者，本活動主辦單位有權取消得獎資格或逕行刪除參賽票數且不予事先告知。
+                                </span>
+                            </p>
+                           
+                        </li>
+                        <li>
+                            <p>
+                                08.&nbsp;
+                                <span>
+                                    活動辦法載明於本活動網頁中，參加者於參加本活動之同時，即視為同意並遵守本活動相關規範及注意事項。如本活動因不可抗力之特殊原因無法執行時，主辦單位有權決定取消、終止、修改或暫停本活動。主辦單位亦保有修正、暫停或終止本活動之權利，恕不另行通知。
+                                </span>
+                            </p>
+                            
+                        </li>
+                        <li>
+                            <p>
+                                09.&nbsp;
+                                <span>
+                                    此活動所使用之軟體或程式及網站上所有內容，均由主辦單位擁有其智慧財產權，任何人不得逕自使用、修改、重製、公開播送、改作、散布、發行、公開發表、進行還原工程、解編或反向組譯。若欲引用其內容，必須依法取得本活動主辦單位之正式書面授權。
+                                </span>
+                            </p>
+                            
+                        </li>
+                    </ul>
+                    <p>※本活動並非由Facebook平台贊助、管理及開發，本活動乃由 SETN.com 三立新聞網/制服地圖主辦，並透過此活動網頁所提供的活動管理服務來舉辦、管理本活動，您在本活動所做的行為，與所提供的資料僅提供予主辦單位管理本活動使用。</p>
+                </div>
+            </div>
+        </main>
+        <footer><!-- 黑底 -->
+            <div class="footer-list "><!--上排清單+底線劃分-->
+                <div class=" footer-list-content"><!--置中(兩個清單一起)-->
+                    <div class="organizer  footer-list-box"><!--執行單位的清單-->
+                        <h2 class=" footer-list-box-title">執行單位</h2>
+                        <div class="footer-list-box-img"><!--執行單位圖片-->
+                            <img src="/images/f_setn.png" alt="">
+                            <img src="/images/logo_um.png" alt="">
+                            <img src="/images/f_st.png" alt="">
+                        </div>
+                    </div>
+                    <div class="thanksto  footer-list-box"><!--特別感謝-->
+                        <h2 class=" footer-list-box-title ">特別感謝</h2>
+                        <div class="footer-list-box-img" ><!--特別感謝圖片-->
+                            <figure class="img-list">
+                                <img class="object-cover" src="/images/f_ga.png" alt="">
+                            </figure>
+                            <figure class="img-list">
+                                <img class="object-cover" src="/images/f_swanky.png" alt="">
+                            </figure>
+                            <figure class="img-list">
+                                <img class="object-cover" src="/images/f_aken.png" alt="">
+                            </figure>
+                            
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                ©2016 SANLIH E-TELEVISION
+            </p> 
+        </footer>
+    </div>
+    
+</body>
+</html>
+<!-- <footer>
+    <div class="footer-list ">
+        <div class="center  footer-list-content">
+            <div class="organizer  footer-list-box">
+                <h2 class=" footer-list-box-title">執行單位</h2>
+                <div class="footer-list-box-img">
+                    <img src="/images/f_setn.png" alt="">
+                    <img src="/images/logo_um.png" alt="">
+                    <img src="/images/f_st.png" alt="">
+                </div>
+            </div>
+            <div class="thanksto  footer-list-box">
+                <h2 class=" footer-list-box-title ">特別感謝</h2>
+                <div class="footer-list-box-img" >
+                    <img src="/images/f_ga.png" alt="">
+                    <img src="/images/f_swanky.png" alt="">
+                    <img src="/images/f_aken.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        ©2016 SANLIH E-TELEVISION
+    </p> 
+</footer> -->
+<!-- footer{
+    background:#111;
+    text-align:center ;
+    display: grid;
+    flex-direction: column;
+    color: #ddd;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px  auto;
+    
+   }
+   footer p{
+    color:#ddd;
+   }
+   .footer-list{
+    border-bottom: 1px double #dddddd88;
+    
+   }
+   .footer-list-content{
+    padding: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1;
+   }
+   
+   .footer-list-box{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+   }
+   .footer-list-box-title {
+    background: #666;
+    text-align: center;
+    color:#ccc;
+    width: 60px;
+    padding: 20px;
+    border-radius: 50%;
+   }
+   .footer-list-box img{
+    margin: 0 5px;
+   }
+   .footer-list-box-img{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+   } -->
