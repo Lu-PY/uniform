@@ -31,7 +31,7 @@
             object-fit: cover;
         }
         .container{
-            width: 900px;
+            width: 100%;
             margin: 0 auto;
         }
         .flex-row{
@@ -47,6 +47,10 @@
             margin: 0 auto;
 
         }
+        .content-box-center{
+        width: 50%;
+        margin: 0 auto;
+       }
         .content-box-title{
         position:absolute;
         background: var(--secend-color-1);
@@ -176,17 +180,22 @@
          border-radius: 50%;
        }
        .menu-button{
-        background-position:top left;
+        background-position: center top;
        }
-       .button-menu:hover{
-        
-         height: 792px;
+       .button-menu:hover {
+    
          background: url("./images/m_menu.png") no-repeat #000000aa
          ;
          background-size: cover;
          border: #fff000 1px  solid;
          border-radius: 0%;
+         
        }
+       .menu-button:hover{
+        background-position: center -72px ;
+       }
+       
+       
        .hr{
         width: 100%;
         height: 9px;
@@ -201,6 +210,7 @@
         top: 55px;
         left: -80px;
        }
+       
        .introduce-text{
         position: relative;
        }
@@ -289,7 +299,11 @@ footer{
         height: 100px;
        }
        
-@media screen and (max-width:540px) {
+@media screen and (max-width:768px) {
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
     .button-bar,.nav-center-button,.slogan img.slogan-p,.icon-hat,.endorsement-one,.endorsement-two,.way img.way-p{
         display: none;
     }
@@ -297,14 +311,14 @@ footer{
         display: block;
         margin: 0 auto;
     }
-    .way img.way-m{
-        
+    .introduce-text{
+        margin: 0 auto;
     }
-    .content-box{
-        width: 600px;
-        margin: 5% auto;
-        
+    .content-box-center{
+        width: 80%;
+        margin: 5px auto;
     }
+    
     .content-box p,.top-content-text p{
         font-size: 22px;
        }
@@ -392,11 +406,11 @@ footer{
                         <i class="fa-brands fa-facebook-f fa-fw"></i>
                     </div>
                 </div>
-                <div class="button-menu">
-                    <div class="menu-button">
+                
+                    <div class=" button-menu menu-button">
                     </div>
                     
-                </div>
+               
             </div>
             <div class="hr"></div>
         </nav>
@@ -425,7 +439,7 @@ footer{
                     </figure>
                 </div>
             </div>
-            <div class="activity-time">
+            <div class="activity-time content-box-center">
                 <h2 class=" content-box-title">活動時間</h2>
                 <div class="content-box">
                     <ul class="list-unstyled">
@@ -452,7 +466,7 @@ footer{
                     </ul>
                 </div>
             </div>
-            <div class="activity-schedule ">
+            <div class="activity-schedule content-box-center">
                 <h2 class=" content-box-title">賽程說明</h2>
                 <div class="content-box">
                     <ul class="list-unstyled">
@@ -482,7 +496,7 @@ footer{
                 </div>
                 
             </div>
-            <div class="activity-awards ">
+            <div class="activity-awards content-box-center">
                 <h2 class=" content-box-title">活動獎項</h2>
                 <div class="content-box">
                     <ul class="list-unstyled">
@@ -515,7 +529,7 @@ footer{
                     </ul>
                 </div>
             </div>
-            <div class="activity-notice ">
+            <div class="activity-notice content-box-center">
                 <h2 class=" content-box-title">注意事項</h2>
                 <div class="content-box">
                     <ul class="list-unstyled">
