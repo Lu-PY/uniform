@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+:root{
+    --light: #eee;
+--dark: #444;
+--link-color: #39b54a;
+--rhythm: 16px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  /* // height: 100vh; */
+  background: red;
+}
+
+.ie-fix {
+  background: yellow;
+  /* // display: table; */
+  /* // width: 100%; */
+  /* // min-height: 100%; */
+}
+
+.wrapper {
+  background: green;
+  display: flex;
+  /* // width: 100%; */
+  /* // height: 100%; */
+}
+
+.hamburger-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.hamburger-label {
+  position: absolute;
+  top: calc(var(--rhythm) * 2);
+  left: calc(var(--rhythm) * 2);
+  z-index: 1;
+  display: block;
+  width: 42px;
+  height: 42px;
+  font: 42px/42px fontawesome;
+  text-align: center;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.hamburger-checkbox:checked ~ .hamburger-label:before {
+  content: '\f00d';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 42px;
+  height: 42px;
+  font: 42px/42px fontawesome;
+  text-align: center;
+  color: var(--light);
+}
+
+.content {
+  flex: 1;
+  padding: calc(var(--rhythm) * 4) calc(var(--rhythm) * 2);
+  background: var(--light);
+  color: var(--dark);
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+  transition: all .3s;
+  min-height: 100vh;
+}
+
+.sidebar {
+  overflow: hidden;
+  width: 0;
+  /* // height: 0; */
+  background: var(--dark);
+  color: var(--light);
+  transition: all .3s;
+  display: flex;
+}
+
+.hamburger-checkbox:checked ~ .sidebar {
+  width: auto;
+  min-height: 100vh;
+  padding-top: 6.5em;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.menu li{
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+    padding: calc(var(--rhythm) * (var(--rhythm) * 2));
+    border-top: 1px solid darken(var(--dark), 10%);
+}
+.menu li:last-child{
+    border-bottom: 1px solid darken(var(--dark), 10%);
+}
+
+/* Decorative styles unrelated to the demo */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  margin: calc(var(--rhythm) * 2) 0;
+  font-weight: 300;
+  font-size: 200%;
+}
+p {
+  margin: 0 0 var(--rhythm) 0;
+}
+a {
+  color:var(--link-color);
+}
+    </style>
+</head>
+<body>
+    <div class="ie-fix">
+        <div class="wrapper">
+        
+          <input id="hamburger" type="checkbox" class="hamburger-checkbox">
+          <label for="hamburger" class="hamburger-label" role="button" aria-labelledby="menu">&#xf0c9;</label>
+          
+          <nav role="navigation" class="sidebar">
+            <ul class="menu">
+              <li>Home</li>
+              <li>Publications</li>
+              <li>Shop</li>
+              <li>Your Account</li>
+              <li>Contact Us</li>
+            </ul>
+          </nav>
+        
+          <main role="main" class="content">
+            <h1>Pure CSS off-canvas menu with flexbox, fixed for IE</h1>
+            <p>This page uses <a href="http://caniuse.com/#feat=flexbox">flexbox</a> to control the layout so that when the menu becomes visible, the content area can resize to fit the remaining width in the viewport, instead of overflowing the viewport and getting cut off on the right side, as happens with most off-canvas menus.</p>
+            <p>The menu's visibility is toggled without JavaScript using the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>.</p>
+          </main>
+        
+        </div>
+        </div>
+</body>
+</html>
