@@ -138,10 +138,21 @@
             text-align: center;
         }
         .menu{
-            display: grid;
+            display: flex;
             grid-template-columns: repeat(4,1fr);
+            justify-content: center;
         }
-        .nav-center-button li a,.nav-right-button li a{
+        .nav-center-button li a{
+            padding:0px 10px;
+            text-decoration: none;
+            color: var(--secend-color-2);
+            font-weight: 900;
+            margin: 0 5px;
+            line-height: 1.6rem;
+            border-radius: 15px;
+        }
+        .nav-right-button li a{
+            padding: 10px 0;
             text-decoration: none;
             color: var(--secend-color-2);
             font-weight: 900;
@@ -153,7 +164,8 @@
             text-decoration: none;
             background: var(--hover-color);
             font-weight: 700;
-            padding:5px 10px;
+            padding:0 10px;
+            
         }
         .nav-center-right{
             position: absolute;
@@ -199,16 +211,16 @@
         display: none;
         width:100%;
         background: var(--main-color);
-        
        }
-       
+       .nav-right-button li a{
+        padding: 10px 0;
+         color: var(--secend-color-1);
+       }
        .nav-right-button li:hover,.nav-right-button li.active {
             text-decoration: none;
             color: var(--secend-color-1);
             background: var(--hover-color);
-            font-weight: 700;
-            
-            
+            font-weight: 700;            
         }
        .menu-button:hover .nav-right-button{
         display: block;
@@ -254,12 +266,10 @@
        }
        .activity-time{
         position: relative;
-        
        }
 /* main introduce-section-2 */
     .activity-schedule{
         position: relative;
-        
        }
     .endorsement-two{
         position: absolute;
@@ -460,7 +470,9 @@ footer{
             <div class="nav-center-right">
                 <div class="button-bar">
                     <div class="button-box">
-                        <i class="fa-solid fa-house fa-fw"></i>
+                       <a href="">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                       </a>
                     </div>
                     <div class="button-box">
                         <i class="fa-brands fa-facebook-f fa-fw"></i>
@@ -542,7 +554,7 @@ footer{
                         </li>
                     </ul>
                     <figure class="way">
-                        <img class="way-p" src="./images/way_p.jpg" alt="">
+                        <img class="way-p object-cover" src="./images/way_p.jpg" alt="">
                         <img class="way-m object-cover" src="./images//way_mobile.jpg" alt="">
                     </figure>
                     <figure class="endorsement-two">
