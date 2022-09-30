@@ -110,10 +110,10 @@
         position: relative;
        }
        .nav-flex{
-        display: flex;
+        display: fex;
         flex-direction: column;
         
-       }
+       }l
        .nav-top-left {
             padding: 0 15px;
         }
@@ -141,7 +141,7 @@
             display: grid;
             grid-template-columns: repeat(4,1fr);
         }
-        .nav-center-button li a{
+        .nav-center-button li a,.nav-right-button li a{
             text-decoration: none;
             color: var(--secend-color-2);
             font-weight: 900;
@@ -171,13 +171,14 @@
        }
        .button-menu{
         display: none;
-         width: 72px;
-         height:72px;
+         width: 48px;
+         height:48px;
          background: url("./images/m_menu.png") no-repeat #000000aa
          ;
          background-size: cover;
          border: #fff000 1px  solid;
          border-radius: 50%;
+         
        }
        .menu-button{
         background-position: center top;
@@ -193,6 +194,30 @@
        }
        .menu-button:hover{
         background-position: center -48px ;
+       }
+       .nav-right-button{
+        display: none;
+        width:100%;
+        background: var(--main-color);
+        
+       }
+       
+       .nav-right-button li:hover,.nav-right-button li.active {
+            text-decoration: none;
+            color: var(--secend-color-1);
+            background: var(--hover-color);
+            font-weight: 700;
+            
+            
+        }
+       .menu-button:hover .nav-right-button{
+        display: block;
+        text-align: center;
+        /* padding:  5px; */
+        background: var(--main-color);
+        position:absolute;
+        left:0;
+        top: 180px;
        }
        
        
@@ -260,8 +285,6 @@ footer{
         display: grid;
         color: #ddd;
         grid-template-columns: 1fr;
-        
-        
        }
        .footer-list{
         border-bottom: 1px #ddd double;
@@ -300,9 +323,18 @@ footer{
        }
        
 @media screen and (max-width:768px) {
+    .right-nav-m{
+        width: fit-content;
+    }
     .container{
         width: 100%;
         margin: 0 auto;
+    }
+    .nav-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
     }
     .button-bar,.nav-center-button,.slogan img.slogan-p,.icon-hat,.endorsement-one,.endorsement-two,.way img.way-p{
         display: none;
@@ -315,10 +347,7 @@ footer{
         top:5px;
         right: 10px;
     }
-    .button-menu{
-        width: 48px;
-        height: 48px;
-    }
+    
     .introduce-text{
         margin: 0 auto;
     }
@@ -380,9 +409,32 @@ footer{
     <div class="wrapper">
         <nav class="nav">
             <div class="nav-content nav-flex">
-                <div class="nav-top-left">
-                    <img src="./images/logo_top.png" alt=""> 
+                <div class="nav-top">
+                    <div class="nav-top-left">
+                        <img src="./images/logo_top.png" alt=""> 
+                    </div>
+                    <div class="right-nav-m">
+                        <div class=" button-menu menu-button">
+                            <div class="nav-right-button ">
+                                <ul class="list-unstyled flex-column">
+                                    <li class="active">
+                                        <a href="">活動辦法</a>
+                                    </li>
+                                    <li>
+                                        <a href="">全台海選</a>
+                                    </li>
+                                    <li>
+                                        <a href="">TOP12決賽</a>
+                                    </li>
+                                    <li>
+                                        <a href="">制服辣秘辛</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="nav-center">
                     <div class="nav-center-logo">
                         <img src="./images/title.png" alt="">
@@ -414,12 +466,8 @@ footer{
                         <i class="fa-brands fa-facebook-f fa-fw"></i>
                     </div>
                 </div>
-                
-                    <div class=" button-menu menu-button">
-                    </div>
-                    
-               
             </div>
+           
             <div class="hr"></div>
         </nav>
         <main class="container flex-column">
