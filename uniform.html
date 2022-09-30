@@ -143,28 +143,31 @@
             justify-content: center;
         }
         .nav-center-button li a{
-            padding:0px 10px;
+            padding:5px 10px;
             text-decoration: none;
             color: var(--secend-color-2);
             font-weight: 900;
-            margin: 0 5px;
+            
             line-height: 1.6rem;
             border-radius: 15px;
+            margin: 0 25px;
         }
         .nav-right-button li a{
             padding: 10px 0;
             text-decoration: none;
             color: var(--secend-color-2);
             font-weight: 900;
-            margin: 0 5px;
+            display: block;
+            /* a 加 display:block 上下padding、margin才有用 */
+            margin: 5px 0;
             line-height: 1.6rem;
-            border-radius: 15px;
+            
         }
         .nav-center-button li:hover a,.nav-center-button li.active a{
             text-decoration: none;
             background: var(--hover-color);
             font-weight: 700;
-            padding:0 10px;
+            padding:5px 10px;
             
         }
         .nav-center-right{
@@ -212,10 +215,7 @@
         width:100%;
         background: var(--main-color);
        }
-       .nav-right-button li a{
-        padding: 10px 0;
-         color: var(--secend-color-1);
-       }
+       
        .nav-right-button li:hover,.nav-right-button li.active {
             text-decoration: none;
             color: var(--secend-color-1);
